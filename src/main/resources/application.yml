@@ -1,0 +1,36 @@
+server.port: 8080
+server.servlet.contextPath: /carvajal-api-rest/api
+
+spring:
+  jpa:
+    properties:
+      hibernate.jdbc.lob.non_contextual_creation: true
+    hibernate.ddl-auto: "update"
+  datasource:
+    db-carvajal:
+      jdbcUrl: jdbc:postgresql://localhost:5432/postgres
+      jmx-enabled: true
+      username: postgres
+      password: admin
+      driver-class-name: org.postgresql.Driver
+      hikari:
+        minimum-idle: 1
+        maximum-pool-size: 3
+        poolName: "carvajal-jdbc-pool"
+        leak-detection-threshold: 5000
+        max-lifetime: 180000
+
+spring.mail.host: "smtp.gmail.com"
+spring.mail.port: "587"
+#Poner el email generado y autorizado para enviar correos
+spring.mail.username: "chegsing@gmail.com"
+#Poner el password generado para enviar correos
+spring.mail.password: "clavegenerada"
+spring.mail.properties.mail.smtp.auth: true
+spring.mail.properties.mail.smtp.starttls.enable: "true"
+
+config.jwt.secretkey: "asdfSFS34wfsdfsdfSDSD32dfsddDDerQSNCK34SOWEK5354fdgdf4"
+
+variableRoles:
+  administrador: ADMIN
+

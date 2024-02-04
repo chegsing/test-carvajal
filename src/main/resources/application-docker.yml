@@ -1,0 +1,28 @@
+server.port: 8080
+server.servlet.contextPath: /service-api-rest/api
+
+spring:
+  jpa:
+    properties:
+      hibernate.jdbc.lob.non_contextual_creation: true
+    hibernate.ddl-auto: "update"
+  datasource: 
+    db-ebusiness: 
+      driver-class-name: "org.postgresql.Driver"
+      hikari: 
+        maximumPoolSize: "10"
+        minimumIdle: "5"
+        poolName: "ebusiness-jdbc-pool"
+      jdbc-url: "jdbc:postgresql://localhost:5432/postgres"
+      jmx-enabled: true
+      password: "admin"
+      username: "postgres"
+
+spring.mail.host: "smtp.gmail.com"
+spring.mail.port: "587"
+spring.mail.username: "aljarrome@gmail.com"
+spring.mail.password: "cbvadqhtxqykmevh"
+spring.mail.properties.mail.smtp.auth: true
+spring.mail.properties.mail.smtp.starttls.enable: "true"
+
+config.jwt.secretkey: "asdfSFS34wfsdfsdfSDSD32dfsddDDerQSNCK34SOWEK5354fdgdf4"
